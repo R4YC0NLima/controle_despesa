@@ -45,6 +45,8 @@ class _TransactionFormState extends State<TransactionForm> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    
     return SingleChildScrollView(
       child: Card(
         elevation: 5,
@@ -84,7 +86,7 @@ class _TransactionFormState extends State<TransactionForm> {
                       ),
                     ),
                     FlatButton(
-                      textColor: Theme.of(context).primaryColor,
+                      textColor: theme.primaryColor,
                       child: Text(
                         'Selecionar Data',
                         style: TextStyle(
@@ -101,8 +103,8 @@ class _TransactionFormState extends State<TransactionForm> {
                 children: <Widget>[
                   RaisedButton(
                     child: Text('Nova Transação'),
-                    color: Theme.of(context).primaryColor,
-                    textColor: Theme.of(context).textTheme.button.color,
+                    color: theme.primaryColor,
+                    textColor: theme.textTheme.button.color,
                     onPressed: _submitForm,
                   ),
                 ],
